@@ -1,3 +1,5 @@
+# TODO:
+# - fix desktop to put it into proper menu
 Summary:	A GTK 2 based scientific calculator
 Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
 Name:		galculator
