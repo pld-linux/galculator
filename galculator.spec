@@ -1,5 +1,5 @@
 Summary:	a GTK 2 based scientific calculator
-Summary(pl):	Kalkulator naukowy bzuj±cy na GTK 2
+Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
 Name:		galculator
 Version:	0.9
 Release:	1
@@ -19,9 +19,9 @@ polish notation, different number bases (DEC, HEX, OCT, BIN) and
 different angle bases (DEG, RAD, GRAD).
 
 %description -l pl
-Kalkulatro naukowy bazuj±cy na GTK 2 z notacj± zwyk³± i odwrotn±
+Kalkulator naukowy bazuj±cy na GTK 2 z notacj± zwyk³± i odwrotn±
 polsk±, ró¿nymi systemami liczbowymi (dziesiêtny, szesnastkowy,
-ósemkowy, binarny) i róznymi miarami k±towymi (stopieñ, radian,
+ósemkowy, binarny) i ró¿nymi miarami k±towymi (stopieñ, radian,
 gradus).
 
 %prep
