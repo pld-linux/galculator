@@ -5,7 +5,7 @@ Version:	1.0
 Release:	0.rc1.1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://members.vol.at/home.floery/electronix/%{name}/%{name}-%{version}rc1.tar.bz2
+Source0:	http://members.vol.at/home.floery/electronix/%{name}/downloads/%{name}-%{version}rc1.tar.bz2
 Patch0:		%{name}-desktop.patch
 URL:		http://members.vol.at/home.floery/electronix/galculator/home.html
 BuildRequires:	gtk+2-devel
