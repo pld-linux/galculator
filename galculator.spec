@@ -5,7 +5,7 @@ Version:	1.1.4
 Release:	1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	3f0d80474ef6c585958e5ece5f6d5aa7
 Patch0:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
