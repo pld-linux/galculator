@@ -8,9 +8,8 @@ Group:		Applications/Math
 Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	4fded689a79b21015bf8d762916c0330
 URL:		http://galculator.sourceforge.net/
-BuildRequires:	gtk+2-devel
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	gtk+2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root)%{_bindir}/%{name}
+%attr(755,root,root) %{_bindir}/%{name}
 %{_desktopdir}/%{name}.desktop
 %{_datadir}/%{name}
-%{_mandir}/man1/%{name}.1.gz
+%{_mandir}/man1/%{name}.1*
