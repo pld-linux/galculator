@@ -1,14 +1,13 @@
 Summary:	a GTK 2 based scientific calculator
 Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
 Name:		galculator
-Version:	1.0
+Version:	1.1.1
 Release:	1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://members.vol.at/home.floery/electronix/%{name}/downloads/%{name}-%{version}.tar.bz2
-# Source0-md5:	26e41318ffef7c8341d14b166da0ebe8
-Patch0:		%{name}-desktop.patch
-URL:		http://members.vol.at/home.floery/electronix/galculator/home.html
+Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	58e495b9ceb8ac8f16a8d1ab344fe1b1
+URL:		http://galculator.sourceforge.net/
 BuildRequires:	gtk+2-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,7 +26,6 @@ gradus).
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__autoconf}
@@ -39,14 +37,16 @@ gradus).
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	desktopdir=%{_datadir}/applications
+	DESTDIR=$RPM_BUILD_ROOT 
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root)%{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
+%{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1.gz
