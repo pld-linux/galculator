@@ -1,11 +1,11 @@
 Summary:	a GTK 2 based scientific calculator
 Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
 Name:		galculator
-Version:	0.9
-Release:	1
+Version:	1.0
+Release:	0.rc1.1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://members.vol.at/home.floery/electronix/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://members.vol.at/home.floery/electronix/%{name}/%{name}-%{version}rc1.tar.bz2
 Patch0:		%{name}-desktop.patch
 URL:		http://members.vol.at/home.floery/electronix/galculator/home.html
 BuildRequires:	gtk+2-devel
@@ -25,7 +25,7 @@ polsk±, ró¿nymi systemami liczbowymi (dziesiêtny, szesnastkowy,
 gradus).
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}rc1
 %patch0 -p1
 
 %build
