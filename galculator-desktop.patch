@@ -6,6 +6,6 @@ diff -ur galculator-1.2.3.orig/galculator.desktop.in galculator-1.2.3/galculator
  Terminal=false
  Type=Application
 -Categories=Application;Utility;
-+Categories=Utility;Calculator;
++Categories=GTK;Utility;Calculator;
  StartupNotify=true
  Encoding=UTF-8
