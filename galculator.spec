@@ -1,5 +1,5 @@
-Summary:	A GTK 2 based scientific calculator
-Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
+Summary:	A GTK+ 2 based scientific calculator
+Summary(pl):	Kalkulator naukowy bazuj±cy na GTK+ 2
 Name:		galculator
 Version:	1.2.4
 Release:	1
@@ -18,12 +18,12 @@ BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GTK 2 based scientific calculator with ordinary notation/reverse
+GTK+ 2 based scientific calculator with ordinary notation/reverse
 polish notation, different number bases (DEC, HEX, OCT, BIN) and
 different angle bases (DEG, RAD, GRAD).
 
 %description -l pl
-Kalkulator naukowy bazuj±cy na GTK 2 z notacj± zwyk³± i odwrotn±
+Kalkulator naukowy bazuj±cy na GTK+ 2 z notacj± zwyk³± i odwrotn±
 polsk±, ró¿nymi systemami liczbowymi (dziesiêtny, szesnastkowy,
 ósemkowy, binarny) i ró¿nymi miarami k±towymi (stopieñ, radian,
 gradus).
