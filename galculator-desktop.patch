@@ -1,8 +1,0 @@
-diff -urN aaa/galculator-1.1.4/galculator.desktop.in galculator-1.1.4/galculator.desktop.in
---- aaa/galculator-1.1.4/galculator.desktop.in	2003-08-24 10:07:58.000000000 +0200
-+++ galculator-1.1.4/galculator.desktop.in	2003-12-12 17:42:55.000000000 +0100
-@@ -6,3 +6,4 @@
- Terminal=false
- Type=Application
- Categories=Application;Utility;
-+Encoding=UTF-8
