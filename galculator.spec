@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sf.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	3f0d80474ef6c585958e5ece5f6d5aa7
+Patch0:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	libglade2-devel >= 2.0.1
@@ -25,6 +26,7 @@ gradus).
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__autoconf}
