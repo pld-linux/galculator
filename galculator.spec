@@ -1,12 +1,12 @@
 Summary:	A GTK+ 2 based scientific calculator
 Summary(pl):	Kalkulator naukowy bazuj±cy na GTK+ 2
 Name:		galculator
-Version:	1.2.4
+Version:	1.2.5
 Release:	1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	a011a3d7063fab63ca371afa3bbde3df
+Source0:	http://dl.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
+# Source0-md5:	0f58963a7fd99c7aa7cb9900d4645f59
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
