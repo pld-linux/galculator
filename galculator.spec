@@ -1,16 +1,13 @@
-# TODO:
-# - fix desktop to put it into proper menu
-Summary:	A GTK 2 based scientific calculator
-Summary(pl):	Kalkulator naukowy bazuj±cy na GTK 2
+Summary:	A GTK+ 2 based scientific calculator
+Summary(pl):	Kalkulator naukowy bazuj±cy na GTK+ 2
 Name:		galculator
-Version:	1.2.3
-Release:	2
+Version:	1.2.5.2
+Release:	1
 License:	GPL
 Group:		Applications/Math
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	f42148bcaac4b6b097cf2055c780bcfc
-Patch0:		%{name}-am.patch
-Patch1:		%{name}-desktop.patch
+Source0:	http://dl.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
+# Source0-md5:	de1cb7d75c76e4fd9f05f100f303d0a2
+Patch0:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,12 +17,12 @@ BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GTK 2 based scientific calculator with ordinary notation/reverse
+GTK+ 2 based scientific calculator with ordinary notation/reverse
 polish notation, different number bases (DEC, HEX, OCT, BIN) and
 different angle bases (DEG, RAD, GRAD).
 
 %description -l pl
-Kalkulator naukowy bazuj±cy na GTK 2 z notacj± zwyk³± i odwrotn±
+Kalkulator naukowy bazuj±cy na GTK+ 2 z notacj± zwyk³± i odwrotn±
 polsk±, ró¿nymi systemami liczbowymi (dziesiêtny, szesnastkowy,
 ósemkowy, binarny) i ró¿nymi miarami k±towymi (stopieñ, radian,
 gradus).
@@ -33,7 +30,6 @@ gradus).
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__aclocal}
