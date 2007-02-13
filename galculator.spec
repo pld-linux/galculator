@@ -1,5 +1,5 @@
 Summary:	A GTK+ 2 based scientific calculator
-Summary(pl.UTF-8):   Kalkulator naukowy bazujący na GTK+ 2
+Summary(pl.UTF-8):	Kalkulator naukowy bazujący na GTK+ 2
 Name:		galculator
 Version:	1.2.5.2
 Release:	1
