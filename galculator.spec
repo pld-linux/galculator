@@ -1,12 +1,12 @@
 Summary:	A GTK+ 2 based scientific calculator
 Summary(pl.UTF-8):	Kalkulator naukowy bazujący na GTK+ 2
 Name:		galculator
-Version:	1.2.5.2
+Version:	1.3
 Release:	1
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
-# Source0-md5:	de1cb7d75c76e4fd9f05f100f303d0a2
+# Source0-md5:	f2de87209d4c9f8dc2fdb1d7a045bef2
 Patch0:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
 BuildRequires:	autoconf
@@ -28,7 +28,7 @@ polską, różnymi systemami liczbowymi (dziesiętny, szesnastkowy,
 gradus).
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}.0
 %patch0 -p1
 
 %build
@@ -55,3 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/%{name}.desktop
 %{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1*
+%{_pixmapsdir}/%{name}
