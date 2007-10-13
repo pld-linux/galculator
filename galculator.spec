@@ -2,7 +2,7 @@ Summary:	A GTK+ 2 based scientific calculator
 Summary(pl.UTF-8):	Kalkulator naukowy bazujący na GTK+ 2
 Name:		galculator
 Version:	1.3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Math
 Source0:	http://dl.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
@@ -28,7 +28,7 @@ polską, różnymi systemami liczbowymi (dziesiętny, szesnastkowy,
 gradus).
 
 %prep
-%setup -q -n %{name}-%{version}.0
+%setup -q -n %{name}-%{version}
 %patch0 -p1
 
 %build
