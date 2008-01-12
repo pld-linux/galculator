@@ -12,7 +12,7 @@ URL:		http://galculator.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	flex
-BuildRequires:	libglade2-devel >= 2.0.1
+BuildRequires:	libglade2-devel >= 1:2.0.1
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,7 +28,7 @@ polską, różnymi systemami liczbowymi (dziesiętny, szesnastkowy,
 gradus).
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p1
 
 %build
