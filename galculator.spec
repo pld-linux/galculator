@@ -1,12 +1,16 @@
+#
+# Conditional build:
+%bcond_with	gtk3	# use GTK+ 3.x instead of 2.x
+
 Summary:	A GTK+ 2 based scientific calculator
 Summary(pl.UTF-8):	Kalkulator naukowy bazujący na GTK+ 2
 Name:		galculator
-Version:	1.3.1
-Release:	2
-License:	GPL
+Version:	2.1.2
+Release:	1
+License:	GPL v2+
 Group:		Applications/Math
-Source0:	http://dl.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
-# Source0-md5:	683a4f0c2cb3d1f56b4c5610fc495c5f
+Source0:	http://downloads.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
+# Source0-md5:	01c97ec3e18c26c64af78dca9f700d43
 Patch0:		%{name}-desktop.patch
 URL:		http://galculator.sourceforge.net/
 BuildRequires:	autoconf
@@ -14,6 +18,9 @@ BuildRequires:	automake
 BuildRequires:	flex
 BuildRequires:	libglade2-devel >= 1:2.0.1
 BuildRequires:	pkgconfig
+Requires:	desktop-file-utils
+Requires:	gtk-update-icon-cache
+Requires:	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,12 +42,12 @@ gradus).
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{__enable_disable gtk3}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -49,10 +56,20 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+%update_desktop_database
+%update_icon_cache hicolor
+
+%postun
+%update_desktop_database
+%update_icon_cache hicolor
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-%{_desktopdir}/%{name}.desktop
-%{_datadir}/%{name}
 %{_mandir}/man1/%{name}.1*
-%{_pixmapsdir}/%{name}
+%{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.xpm
+%{_iconsdir}/hicolor/*/apps/galculator.png
+%{_iconsdir}/hicolor/*/apps/galculator.svg
