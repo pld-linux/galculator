@@ -6,7 +6,7 @@ Summary:	A GTK+ 2 based scientific calculator
 Summary(pl.UTF-8):	Kalkulator naukowy bazujący na GTK+ 2
 Name:		galculator
 Version:	2.1.2
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Math
 Source0:	http://downloads.sourceforge.net/galculator/%{name}-%{version}.tar.bz2
@@ -50,6 +50,9 @@ gradus).
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -r $RPM_BUILD_ROOT%{_localedir}/da_DK
+rm -r $RPM_BUILD_ROOT%{_localedir}/kk_KZ
 
 %find_lang %{name}
 
