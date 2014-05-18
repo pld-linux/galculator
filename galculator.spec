@@ -51,8 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -r $RPM_BUILD_ROOT%{_localedir}/da_DK
-rm -r $RPM_BUILD_ROOT%{_localedir}/kk_KZ
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{da_DK,da}
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{kk_KZ,kk}
 
 %find_lang %{name}
 
